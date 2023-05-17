@@ -44,6 +44,32 @@ public class Simulator {
         houseList.add(new House(12));
         houseList.add(new House(14));
         printObjectList(houseList);
+
+        // Using wild card
+        // print the list of houses using wildcard function
+        System.out.println("Using wildcard function");
+        printBuildingList(houseList);
+        System.out.println();
+
+        // print the list of offices using wildcard function
+        printBuildingList(officeList);
+        System.out.println();
+
+        // print the list of building using wildcard function
+        printBuildingList(buildingList);
+        System.out.println();
+
+        // using the wildcard with super keyword
+        addHouseToList(houseList);
+        addHouseToList(buildingList);
+
+
+    }
+
+    // method to add a list of elements into a list
+    public static void addHouseToList(List<? super House> buildings) {
+        buildings.add(new House(1));
+        buildings.forEach(System.out::println);
     }
 
     // method to print building object
@@ -57,4 +83,12 @@ public class Simulator {
         buildingList
                 .forEach(Simulator::printObject);
     }
+
+    // see, I am gonna use the wildcard symbol ? to mention any class that extends the Building class
+    // method to print a list of building objects as arguments of type List, all child classes of Building
+    public static void printBuildingList(List<? extends Building> buildingList) {
+        buildingList
+                .forEach(System.out::println);
+    }
+
 }
