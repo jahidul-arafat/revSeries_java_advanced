@@ -5,11 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.jarotball</groupId>
-    <artifactId>JavaAdvanced</artifactId>
+    <artifactId>HairdresserBookingSystem</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>JavaModularApplication1</module>
+        <module>bookingsystem</module>
+        <module>customer</module>
     </modules>
 
     <properties>
